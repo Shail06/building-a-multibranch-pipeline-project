@@ -2,8 +2,8 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            steps {
-                sh 'echo "${env.CHANGE_ID}"'
+            script {
+                println(env.CHANGE_ID)
             }
         }
     }
